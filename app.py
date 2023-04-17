@@ -30,3 +30,7 @@ train_features = train_data.drop(['price'], axis=1)
 train_labels = train_data['price']
 test_features = test_data.drop(['price'], axis=1)
 test_labels = test_data['price']
+
+# Crear modelo
+model = Sequential()
+model.add(Dense(1, input_dim=7, activation='linear'))
