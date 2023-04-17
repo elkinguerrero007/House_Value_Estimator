@@ -21,3 +21,7 @@ data_encoded = pd.DataFrame(one_hot_encoder.transform(data[['ubicacion']]).toarr
 data = data.join(data_encoded)
 data = data.drop(['ubicacion'], axis=1)
 
+# Dividir datos en entrenamiento y prueba
+train_data = data.sample(frac=0.8, random_state=0)
+test_data = data.drop(train_data.index)
+
