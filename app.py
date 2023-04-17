@@ -44,3 +44,9 @@ model.fit(train_features, train_labels, epochs=18000, batch_size=5)
 
 # Guardar modelo entrenado
 joblib.dump(model, '/home/elkin/flask2/model.joblib')
+
+
+# Cargar objeto OneHotEncoder
+one_hot_encoder = joblib.load('/home/elkin/flask2/one_hot_encoder.joblib')
+# Cargar modelo entrenado
+model = joblib.load('/home/elkin/flask2/model.joblib')
