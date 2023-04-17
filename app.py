@@ -8,3 +8,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 app = Flask(__name__)
+
+
+# Cargar datos
+data = pd.read_csv('/home/elkin/flask2/house_data.csv')
+
