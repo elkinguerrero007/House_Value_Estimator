@@ -13,3 +13,11 @@ app = Flask(__name__)
 # Cargar datos
 data = pd.read_csv('/home/elkin/flask2/house_data.csv')
 
+# Codificar la columna 'ubicacion' utilizando OneHotEncoder
+one_hot_encoder = OneHotEncoder()
+one_hot_encoder.fit(data[['ubicacion']])
+joblib.dump(one_hot_encoder, '/home/elkin/flask2/one_hot_encoder.joblib')
+data_encoded = pd.DataFrame(one_hot_encoder.transform(data[['ubicacion']]).toarray())
+data = data.join(data_encoded)
+data = data.drop(['ubicacion'], axis=1)
+
