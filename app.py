@@ -50,3 +50,13 @@ joblib.dump(model, '/home/elkin/flask2/model.joblib')
 one_hot_encoder = joblib.load('/home/elkin/flask2/one_hot_encoder.joblib')
 # Cargar modelo entrenado
 model = joblib.load('/home/elkin/flask2/model.joblib')
+
+# Función para hacer predicciones
+def make_prediction(area, num_habitaciones, num_banos, ubicacion):
+    # Codificar la ubicación
+    encoded_location = one_hot_encoder.transform([[ubicacion]]).toarray()
+    # Crear arreglo con los datos ingresados en el formulario y la ubicación codificada
+    data = np.array([[area, num_habitaciones, num_banos] + encoded_location[0].tolist()])
+    # Hacer predicción
+    prediction = model.predict(data)
+    return prediction[0][0]
