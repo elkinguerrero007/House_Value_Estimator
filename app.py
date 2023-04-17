@@ -34,3 +34,8 @@ test_labels = test_data['price']
 # Crear modelo
 model = Sequential()
 model.add(Dense(1, input_dim=7, activation='linear'))
+
+
+# Compilar modelo
+model.compile(loss='mean_squared_error', optimizer='adam')
+
