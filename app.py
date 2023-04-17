@@ -39,3 +39,8 @@ model.add(Dense(1, input_dim=7, activation='linear'))
 # Compilar modelo
 model.compile(loss='mean_squared_error', optimizer='adam')
 
+# Entrenar modelo
+model.fit(train_features, train_labels, epochs=18000, batch_size=5)
+
+# Guardar modelo entrenado
+joblib.dump(model, '/home/elkin/flask2/model.joblib')
