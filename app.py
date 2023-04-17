@@ -25,3 +25,8 @@ data = data.drop(['ubicacion'], axis=1)
 train_data = data.sample(frac=0.8, random_state=0)
 test_data = data.drop(train_data.index)
 
+# Separar las características de las etiquetas
+train_features = train_data.drop(['price'], axis=1)
+train_labels = train_data['price']
+test_features = test_data.drop(['price'], axis=1)
+test_labels = test_data['price']
