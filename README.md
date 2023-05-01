@@ -1,5 +1,7 @@
 # Machine Learning Model for Housing Price Prediction
 
+Authors: [Elkin Guerrero], [Juan Sebastian Posada]
+
 
 This project is a machine learning model that predicts the value of a house based on its area, number of bathrooms, and number of bedrooms. The model was trained on a dataset of historical houses and was implemented using TensorFlow and Keras on a Ubuntu backend. In addition, a REST API was provided using Flask to interact with the model and make predictions.
 
@@ -46,3 +48,7 @@ It is important to note that this model has limitations and should not be used a
 ## Future Improvements
 
 Although this model provides a good estimate of the price of a house based on its features, there are several improvements that could be made in the future, such as the inclusion of more features, the use of regularization techniques to avoid overfitting, and the implementation of a more user-friendly interface
+
+## Contributors
+[Elkin Guerrero]: implemented the TensorFlow and Keras models, created the Flask API, and wrote the README.md file.
+[Juan Sebastian Posada]: collected and preprocessed the housing dataset, performed exploratory data analysis, and assisted in the model tuning and realize front-end whith Html,Css and JavaScript. 
