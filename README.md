@@ -4,7 +4,8 @@
 - [Elkin Guerrero](https://github.com/elkinguerrero007)
 - [Juan Sebastian Posada](https://github.com/Juansepo13/Juansepo13)
 
-![Home](/home.png =500x)
+![home](https://user-images.githubusercontent.com/85587286/235753041-2c2d3900-d626-4f8e-b4d5-383feadee922.png)
+
 
 This project is a machine learning model that predicts the value of a house based on its area, number of bathrooms, and number of bedrooms. The model was trained on a dataset of historical houses and was implemented using TensorFlow and Keras on a Ubuntu backend. In addition, a REST API was provided using Flask to interact with the model and make predictions.
 
