@@ -4,7 +4,7 @@
 - [Elkin Guerrero](https://github.com/elkinguerrero007)
 - [Juan Sebastian Posada](https://github.com/Juansepo13/Juansepo13)
 
-![Home](House_Value_Estimator/home.png)
+![Home](House_Value_Estimator/home.png =500x)
 
 
 
