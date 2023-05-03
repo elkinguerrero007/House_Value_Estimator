@@ -7,7 +7,7 @@ from keras.layers import Dense
 import joblib
 
 # Cargar datos
-data = pd.read_csv('/home/elkin/flask2/house_data.csv')
+data = pd.read_csv('/home/juansepo13/flask2/house_data.csv')
 
 # Codificar la columna 'ubicacion' utilizando OneHotEncoder
 one_hot_encoder = OneHotEncoder()

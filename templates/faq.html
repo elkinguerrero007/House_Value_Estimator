@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- HEAD -->
+    <meta charset="UTF-8">
+    <title>House Price Prediction Model</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header> <!-- header -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">House Price Prediction Model</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav"> <!-- Barra de Navegacion -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:5000/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contactus') }}">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('terms_and_conditions') }}">Terms and Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>How does the house price prediction service work?<h3>
+                    <p>The service uses historical home sales data, along with advanced statistical modeling and machine learning algorithms, to predict a home's price based on characteristics such as location, size, and age.</p>
+                </div>
+            </div>
+
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>What are the benefits of using the house price prediction service?<h3>
+                    <p>The service can help you make more informed decisions about buying or selling a home, which can save you time and money. It also provides you with an objective estimate of a property's value, which can be helpful in price negotiations.</p>
+                </div> 
+            </div>
+            
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>What is the cost of the house price prediction service?<h3>
+                    <p>The service offers different subscription plans with different levels of access and functionality. You can find detailed information about the plans and prices on our website.</p>
+                </div>
+            </div>
+
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>How can I get technical support or customer service for the house price prediction service?<h3>
+                    <p>For technical support or customer service, you can contact us through our email or phone number. Our support team will be happy to help you with any problems or questions you may have.</p>
+                </div>
+            </div>
+
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>How can I pay for the house price prediction service?<h3>
+                    <p>We accept various payment methods, including credit and debit cards, bank transfers, and PayPal. You can select the payment method that best suits your needs during the registration process.</p>
+                </div>  
+            </div>
+
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>What are the delivery times or response times for the house price prediction service?<h3>
+                    <p>The service generates price predictions instantly and there are no lead times. Additionally, our support team strives to respond to all support questions and requests within 24 hours.</p>
+                </div>
+            </div>
+            
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>How can I cancel my subscription or request a refund for the house price prediction service?<h3>
+                    <p>You can cancel your subscription at any time through your account on our website. In addition, we offer a full refund policy within 30 days from the date of purchase.</p>
+                </div>
+            </div>
+
+            <div class="faq section-faq">
+                <div class="faq-content">
+                    <h3>What are the technical requirements to use the house price prediction service?<h3>
+                    <p>The service can be accessed through a web browser and does not require any download or installation. In addition, a stable internet connection and a device with adequate screen and resolution are recommended for a better user experience.</p>  
+                </div>
+            </div>  
+        </article>
+        
+        <article> <!-- Second Article, PUBLICIDAD y SCRIPTS -->
+            <aside> <!-- aside con opciones -->
+                <h2>Publicidad</h2>
+                <div id="anuncios">
+                    <script>
+                        var anuncios = [
+                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
+                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
+                        ];
+                    
+                        // Generar un número aleatorio para mostrar un anuncio aleatorio
+                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                    
+                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
+                        var imagenAnuncio = document.createElement("img");
+                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(imagenAnuncio);
+                    
+                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
+                        var textoAnuncio = document.createElement("p");
+                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(textoAnuncio);
+                    </script> 
+                </div>
+                <div id="anuncios">
+                    <script>
+                        var anuncios = [
+                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
+                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
+                        ];
+                    
+                        // Generar un número aleatorio para mostrar un anuncio aleatorio
+                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                    
+                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
+                        var imagenAnuncio = document.createElement("img");
+                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(imagenAnuncio);
+                    
+                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
+                        var textoAnuncio = document.createElement("p");
+                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(textoAnuncio);
+                    </script> 
+                </div>
+                <div id="anuncios">
+                    <script>
+                        var anuncios = [
+                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
+                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
+                        ];
+                    
+                        // Generar un número aleatorio para mostrar un anuncio aleatorio
+                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                    
+                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
+                        var imagenAnuncio = document.createElement("img");
+                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(imagenAnuncio);
+                    
+                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
+                        var textoAnuncio = document.createElement("p");
+                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(textoAnuncio);
+                    </script> 
+                </div>
+                <div id="anuncios">
+                    <script>
+                        var anuncios = [
+                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
+                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
+                        ];
+                    
+                        // Generar un número aleatorio para mostrar un anuncio aleatorio
+                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                    
+                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
+                        var imagenAnuncio = document.createElement("img");
+                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(imagenAnuncio);
+                    
+                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
+                        var textoAnuncio = document.createElement("p");
+                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                        document.getElementById("anuncios").appendChild(textoAnuncio);
+                    </script> 
+                </div>              
+            </aside>
+        </article>    
+    </main>
+    <footer> <!-- Foother -->
+        <div class="container-fluid bg-light">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>House Price Prediction Model</h4>
+                        <p>This website uses a machine learning model to predict the price of a home based on its area, number of bedrooms, number of bathrooms, and location. This model was trained with data on home sales in the city of Cali, Colombia.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-envelope"></i> 3439@holbertonstudents.com - 3895@holbertonstudents.com</li>
+                            <li><i class="fas fa-phone"></i>333-33-33</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Zona America Holberton School</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Follow us on</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><img src="/static/img/github_loge.png" class="icon-github"> Github</a></li>
+                            <li><a href="#"><img src="/static/img/slack_loge.png" class="icon-slack"> Slack</a></li>
+                            <li><a href="#"><img src="/static/img/stackoverflow_loge.png" class="icon-stackoverflow"> Stackoverflow</a></li>
+                            <li><a href="#"><img src="/static/img/facebook_loge.png" class="icon-facebook"> Facebook</a></li>
+                            <li><a href="#"><img src="/static/img/twitter_loge.png" class="icon-twitter"> Twitter</a></li>
+                            <li><a href="#"><img src="/static/img/instagram_loge.png" class="icon-instagram"> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <sc|ript src="/static/js/bootstrap.bundle.min.js"></sc|ript>
+</body>
+</html>

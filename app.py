@@ -1,12 +1,27 @@
 #!/usr/bin/python3
-# Importar librerias
-import numpy as np
+from flask import Flask, request, render_template
 import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+import joblib
 from keras.models import Sequential
 from keras.layers import Dense
+import mysql.connector
+
+
+
+app = Flask(__name__)
 
 # Cargar datos
-data = pd.read_csv('/home/elkin/house_data/house_data.csv')
+data = pd.read_csv('/home/juansepo13/flask2/house_data.csv')
+
+# Codificar la columna 'ubicacion' utilizando OneHotEncoder
+one_hot_encoder = OneHotEncoder()
+one_hot_encoder.fit(data[['ubicacion']])
+joblib.dump(one_hot_encoder, '/home/juansepo13/flask2/one_hot_encoder.joblib')
+data_encoded = pd.DataFrame(one_hot_encoder.transform(data[['ubicacion']]).toarray())
+data = data.join(data_encoded)
+data = data.drop(['ubicacion'], axis=1)
 
 # Dividir datos en entrenamiento y prueba
 train_data = data.sample(frac=0.8, random_state=0)
@@ -20,19 +35,72 @@ test_labels = test_data['price']
 
 # Crear modelo
 model = Sequential()
-model.add(Dense(1, input_dim=4, activation='linear'))
+model.add(Dense(1, input_dim=7, activation='linear'))
 
 # Compilar modelo
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 # Entrenar modelo
-model.fit(train_features, train_labels, epochs=50, batch_size=10)
+model.fit(train_features, train_labels, epochs=10, batch_size=5)
 
-# Evaluar modelo
-test_loss = model.evaluate(test_features, test_labels)
-print(f"El error cuadrático medio en el conjunto de prueba es de: {test_loss}")
+# Guardar modelo entrenado
+joblib.dump(model, '/home/juansepo13/flask2/model.joblib')
 
-# Hacer predicciones
-new_data = np.array([[2000, 3, 2, 1]]) # Ejemplo de nueva casa
-prediction = model.predict(new_data)
-print(f"La casa de ejemplo tiene un valor estimado de: {prediction}")
+# Cargar objeto OneHotEncoder
+one_hot_encoder = joblib.load('/home/juansepo13/flask2/one_hot_encoder.joblib')
+# Cargar modelo entrenado
+model = joblib.load('/home/juansepo13/flask2/model.joblib')
+
+# Función para hacer predicciones
+def make_prediction(area, num_habitaciones, num_banos, ubicacion):
+    # Codificar la ubicación
+    encoded_location = one_hot_encoder.transform([[ubicacion]]).toarray()
+    # Crear arreglo con los datos ingresados en el formulario y la ubicación codificada
+    data = np.array([[area, num_habitaciones, num_banos] + encoded_location[0].tolist()])
+    # Hacer predicción
+    prediction = model.predict(data)
+    return prediction[0][0]
+
+# Crea una conexión a la base de datos
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="tu_usuario",
+#   password="tu_contraseña",
+#   database="nombre_de_tu_base_de_datos"
+# )
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    area = float(request.form['area'])
+    num_habitaciones = int(request.form['num_habitaciones'])
+    num_banos = int(request.form['num_banos'])
+    ubicacion = request.form['ubicacion']
+    prediction = make_prediction(area, num_habitaciones, num_banos, ubicacion)
+    return render_template('result.html', prediction=prediction)
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
+@app.route('/terms_and_conditions')
+def terms_and_conditions():
+    return render_template('terms_and_conditions.html')
+
+@app.route('/privacy_policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

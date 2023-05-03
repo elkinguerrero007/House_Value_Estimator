@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- HEAD -->
+    <meta charset="UTF-8">
+    <title>House Price Prediction Model</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header> <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">House Price Prediction Model</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- Barra de Navegacion -->
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:5000/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contactus') }}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('faq') }}">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('terms_and_conditions') }}">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+      <div id="blog">
+        <div id="publicaciones">
+      
+        <script>
+          var publicaciones = [
+            { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
+            { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
+            { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
+            { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
+            { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
+        ];
+        
+        for (var i = 0; i < 6; i++) {
+          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
+          var cajaPublicacion = document.createElement("div");
+          cajaPublicacion.className = "publicacion";
+          var imagenPublicacion = document.createElement("img");
+          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
+          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(imagenPublicacion);
+          var tituloPublicacion = document.createElement("h3");
+          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(tituloPublicacion);
+          var fechaPublicacion = document.createElement("p");
+          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
+          cajaPublicacion.appendChild(fechaPublicacion);
+          var textoPublicacion = document.createElement("p");
+          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
+          cajaPublicacion.appendChild(textoPublicacion);
+          document.getElementById("publicaciones").appendChild(cajaPublicacion);
+        }
+        </script>
+        </div>
+      </div>
+      <div id="blog">
+        <div id="publicaciones">
+      
+        <script>
+          var publicaciones = [
+          { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
+          { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
+          { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
+          { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
+          { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
+      ];
+        
+        for (var i = 0; i < 6; i++) {
+          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
+          var cajaPublicacion = document.createElement("div");
+          cajaPublicacion.className = "publicacion";
+          var imagenPublicacion = document.createElement("img");
+          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
+          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(imagenPublicacion);
+          var tituloPublicacion = document.createElement("h3");
+          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(tituloPublicacion);
+          var fechaPublicacion = document.createElement("p");
+          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
+          cajaPublicacion.appendChild(fechaPublicacion);
+          var textoPublicacion = document.createElement("p");
+          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
+          cajaPublicacion.appendChild(textoPublicacion);
+          document.getElementById("publicaciones").appendChild(cajaPublicacion);
+        }
+        </script>
+        </div>
+      </div>
+      <div id="blog">
+        <div id="publicaciones">
+      
+        <script>
+          var publicaciones = [
+          { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
+          { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
+          { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
+          { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
+          { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
+      ];
+        
+        for (var i = 0; i < 6; i++) {
+          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
+          var cajaPublicacion = document.createElement("div");
+          cajaPublicacion.className = "publicacion";
+          var imagenPublicacion = document.createElement("img");
+          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
+          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(imagenPublicacion);
+          var tituloPublicacion = document.createElement("h3");
+          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
+          cajaPublicacion.appendChild(tituloPublicacion);
+          var fechaPublicacion = document.createElement("p");
+          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
+          cajaPublicacion.appendChild(fechaPublicacion);
+          var textoPublicacion = document.createElement("p");
+          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
+          cajaPublicacion.appendChild(textoPublicacion);
+          document.getElementById("publicaciones").appendChild(cajaPublicacion);
+        }
+        </script>
+        </div>
+      </div>
+        
+         
+        <article> <!-- Second Article, PUBLICIDAD y SCRIPTS -->
+            <aside>
+                <h2>Publicidad</h2>
+                <div id="anuncios">
+                  <script>
+                    var anuncios = [
+                      { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                      { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                      { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" },
+                      { imagen: "/static/img/propiedad4.jpg", texto: "Estás buscando comprar o vender una propiedad? Con nuestro software de predicción de precios, tendrás información precisa para tomar la mejor decisión." },
+                      { imagen: "/static/img/propiedad5.jpg", texto: "¿No sabes cuál es el valor real de tu propiedad? Con nuestro software, podrás obtener una estimación precisa en cuestión de minutos." },
+                      { imagen: "/static/img/propiedad6.jpg", texto: "¿Quieres evitar perder dinero al vender tu propiedad? Nuestro software de predicción de precios te ayudará a poner el precio correcto desde el principio." },
+                      { imagen: "/static/img/propiedad7.jpg", texto: "Con nuestro software de predicción de precios, obtendrás información actualizada y precisa sobre el valor de las propiedades en tu zona, lo que te permitirá tomar decisiones informadas." },
+                      { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                      { imagen: "/static/img/servicio2.jpg", texto: "Descubre el poder de la inteligencia artificial con nuestro software" },
+                      { imagen: "/static/img/servicio3.jpg", texto: "Ahorra tiempo y dinero con nuestro software de IA" },
+                      { imagen: "/static/img/servicio4.jpg", texto: "Nuestro software con IA te ayuda a tomar decisiones informadas y precisas" },
+                      { imagen: "/static/img/servicio5.jpg", texto: "Convierte tus datos en insights valiosos con nuestro software de IA" },
+                      { imagen: "/static/img/servicio6.jpg", texto: "Simplifica tus procesos y aumenta tu eficiencia con nuestro software de IA" },
+                      { imagen: "/static/img/servicio7.jpg", texto: "Obtén resultados precisos y en tiempo real con nuestro software de inteligencia artificial." }
+                    ];
+                    
+                    for (var i = 0; i < 4; i++) {
+                      var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                      var imagenAnuncio = document.createElement("img");
+                      imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                      imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                      document.getElementById("anuncios").appendChild(imagenAnuncio);
+                      var textoAnuncio = document.createElement("p");
+                      textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                      document.getElementById("anuncios").appendChild(textoAnuncio);
+                    }
+                  </script>
+                </div>
+              </aside>
+        </article>    
+    </main>
+    <footer> <!-- Foother -->
+      <div class="container-fluid bg-light">
+          <div class="container py-3">
+              <div class="row">
+                  <div class="col-md-4">
+                      <h4>House Price Prediction Model</h4>
+                      <p>This website uses a machine learning model to predict the price of a home based on its area, number of bedrooms, number of bathrooms, and location. This model was trained with data on home sales in the city of Cali, Colombia.</p>
+                  </div>
+                  <div class="col-md-4">
+                      <h4>Contact Us</h4>
+                      <ul class="list-unstyled">
+                          <li><i class="fas fa-envelope"></i> 3439@holbertonstudents.com - 3895@holbertonstudents.com</li>
+                          <li><i class="fas fa-phone"></i>333-33-33</li>
+                          <li><i class="fas fa-map-marker-alt"></i> Zona America Holberton School</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h4>Follow us on</h4>
+                      <ul class="list-unstyled">
+                          <li><a href="#"><img src="/static/img/github_loge.png" class="icon-github"> Github</a></li>
+                          <li><a href="#"><img src="/static/img/slack_loge.png" class="icon-slack"> Slack</a></li>
+                          <li><a href="#"><img src="/static/img/stackoverflow_loge.png" class="icon-stackoverflow"> Stackoverflow</a></li>
+                          <li><a href="#"><img src="/static/img/facebook_loge.png" class="icon-facebook"> Facebook</a></li>
+                          <li><a href="#"><img src="/static/img/twitter_loge.png" class="icon-twitter"> Twitter</a></li>
+                          <li><a href="#"><img src="/static/img/instagram_loge.png" class="icon-instagram"> Instagram</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <sc|ript src="/static/js/bootstrap.bundle.min.js"></sc|ript>
+</body>
+</html>
