@@ -96,109 +96,40 @@
         </article>
         
         <article> <!-- Second Article, PUBLICIDAD y SCRIPTS -->
-            <aside> <!-- aside con opciones -->
-                <h2>Publicidad</h2>
+            <aside>
+                <h2>Advertising</h2>
                 <div id="anuncios">
-                    <script>
-                        var anuncios = [
-                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
-                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
-                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
-                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
-                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
-                        ];
+                  <script>
+                    var anuncios = [
+                      { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
+                      { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
+                      { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" },
+                      { imagen: "/static/img/propiedad4.jpg", texto: "Estás buscando comprar o vender una propiedad? Con nuestro software de predicción de precios, tendrás información precisa para tomar la mejor decisión." },
+                      { imagen: "/static/img/propiedad5.jpg", texto: "¿No sabes cuál es el valor real de tu propiedad? Con nuestro software, podrás obtener una estimación precisa en cuestión de minutos." },
+                      { imagen: "/static/img/propiedad6.jpg", texto: "¿Quieres evitar perder dinero al vender tu propiedad? Nuestro software de predicción de precios te ayudará a poner el precio correcto desde el principio." },
+                      { imagen: "/static/img/propiedad7.jpg", texto: "Con nuestro software de predicción de precios, obtendrás información actualizada y precisa sobre el valor de las propiedades en tu zona, lo que te permitirá tomar decisiones informadas." },
+                      { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
+                      { imagen: "/static/img/servicio2.jpg", texto: "Descubre el poder de la inteligencia artificial con nuestro software" },
+                      { imagen: "/static/img/servicio3.jpg", texto: "Ahorra tiempo y dinero con nuestro software de IA" },
+                      { imagen: "/static/img/servicio4.jpg", texto: "Nuestro software con IA te ayuda a tomar decisiones informadas y precisas" },
+                      { imagen: "/static/img/servicio5.jpg", texto: "Convierte tus datos en insights valiosos con nuestro software de IA" },
+                      { imagen: "/static/img/servicio6.jpg", texto: "Simplifica tus procesos y aumenta tu eficiencia con nuestro software de IA" },
+                      { imagen: "/static/img/servicio7.jpg", texto: "Obtén resultados precisos y en tiempo real con nuestro software de inteligencia artificial." }
+                    ];
                     
-                        // Generar un número aleatorio para mostrar un anuncio aleatorio
-                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
-                    
-                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
-                        var imagenAnuncio = document.createElement("img");
-                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
-                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(imagenAnuncio);
-                    
-                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
-                        var textoAnuncio = document.createElement("p");
-                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(textoAnuncio);
-                    </script> 
+                    for (var i = 0; i < 4; i++) {
+                      var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
+                      var imagenAnuncio = document.createElement("img");
+                      imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
+                      imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
+                      document.getElementById("anuncios").appendChild(imagenAnuncio);
+                      var textoAnuncio = document.createElement("p");
+                      textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
+                      document.getElementById("anuncios").appendChild(textoAnuncio);
+                    }
+                  </script>
                 </div>
-                <div id="anuncios">
-                    <script>
-                        var anuncios = [
-                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
-                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
-                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
-                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
-                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
-                        ];
-                    
-                        // Generar un número aleatorio para mostrar un anuncio aleatorio
-                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
-                    
-                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
-                        var imagenAnuncio = document.createElement("img");
-                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
-                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(imagenAnuncio);
-                    
-                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
-                        var textoAnuncio = document.createElement("p");
-                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(textoAnuncio);
-                    </script> 
-                </div>
-                <div id="anuncios">
-                    <script>
-                        var anuncios = [
-                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
-                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
-                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
-                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
-                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
-                        ];
-                    
-                        // Generar un número aleatorio para mostrar un anuncio aleatorio
-                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
-                    
-                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
-                        var imagenAnuncio = document.createElement("img");
-                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
-                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(imagenAnuncio);
-                    
-                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
-                        var textoAnuncio = document.createElement("p");
-                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(textoAnuncio);
-                    </script> 
-                </div>
-                <div id="anuncios">
-                    <script>
-                        var anuncios = [
-                        { imagen: "/static/img/propiedad1.jpg", texto: "Encuentra la casa de tus sueños con nosotros" },
-                        { imagen: "/static/img/servicio2.jpg", texto: "¿Quieres ser el próximo Steve Jobs? ¡Únete a nosotros!" },
-                        { imagen: "/static/img/propiedad2.jpg", texto: "¿Quieres saber el valor de tu casa? ¡Usa nuestro software!" },
-                        { imagen: "/static/img/servicio1.jpg", texto: "Nuestros software pueden predecir cualquier cosa que necesites" },
-                        { imagen: "/static/img/propiedad3.jpg", texto: "Somos líderes en el mercado inmobiliario" }
-                        ];
-                    
-                        // Generar un número aleatorio para mostrar un anuncio aleatorio
-                        var indiceAnuncio = Math.floor(Math.random() * anuncios.length);
-                    
-                        // Crear un elemento de imagen y agregarlo al contenedor de anuncios
-                        var imagenAnuncio = document.createElement("img");
-                        imagenAnuncio.src = anuncios[indiceAnuncio].imagen;
-                        imagenAnuncio.alt = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(imagenAnuncio);
-                    
-                        // Crear un elemento de texto y agregarlo al contenedor de anuncios
-                        var textoAnuncio = document.createElement("p");
-                        textoAnuncio.textContent = anuncios[indiceAnuncio].texto;
-                        document.getElementById("anuncios").appendChild(textoAnuncio);
-                    </script> 
-                </div>              
-            </aside>
+              </aside>
         </article>    
     </main>
     <footer> <!-- Foother -->
