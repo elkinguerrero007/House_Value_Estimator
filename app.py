@@ -13,12 +13,12 @@ import mysql.connector
 app = Flask(__name__)
 
 # Cargar datos
-data = pd.read_csv('/home/juansepo13/flask2/house_data.csv')
+data = pd.read_csv('/home/juansepo13/House_Value_Estimator/house_data.csv')
 
 # Codificar la columna 'ubicacion' utilizando OneHotEncoder
 one_hot_encoder = OneHotEncoder()
 one_hot_encoder.fit(data[['ubicacion']])
-joblib.dump(one_hot_encoder, '/home/juansepo13/flask2/one_hot_encoder.joblib')
+joblib.dump(one_hot_encoder, '/home/juansepo13/House_Value_Estimator/one_hot_encoder.joblib')
 data_encoded = pd.DataFrame(one_hot_encoder.transform(data[['ubicacion']]).toarray())
 data = data.join(data_encoded)
 data = data.drop(['ubicacion'], axis=1)
@@ -44,12 +44,12 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 model.fit(train_features, train_labels, epochs=10, batch_size=5)
 
 # Guardar modelo entrenado
-joblib.dump(model, '/home/juansepo13/flask2/model.joblib')
+joblib.dump(model, '/home/juansepo13/House_Value_Estimator/model.joblib')
 
 # Cargar objeto OneHotEncoder
-one_hot_encoder = joblib.load('/home/juansepo13/flask2/one_hot_encoder.joblib')
+one_hot_encoder = joblib.load('/home/juansepo13/House_Value_Estimator/one_hot_encoder.joblib')
 # Cargar modelo entrenado
-model = joblib.load('/home/juansepo13/flask2/model.joblib')
+model = joblib.load('/home/juansepo13/House_Value_Estimator/model.joblib')
 
 # Función para hacer predicciones
 def make_prediction(area, num_habitaciones, num_banos, ubicacion):

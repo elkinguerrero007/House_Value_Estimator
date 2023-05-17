@@ -37,108 +37,80 @@
     </nav>
     </header>
     <main>
-      <div id="blog">
-        <div id="publicaciones">
-      
-        <script>
-          var publicaciones = [
-            { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
-            { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
-            { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
-            { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
-            { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
-        ];
-        
-        for (var i = 0; i < 6; i++) {
-          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
-          var cajaPublicacion = document.createElement("div");
-          cajaPublicacion.className = "publicacion";
-          var imagenPublicacion = document.createElement("img");
-          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
-          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(imagenPublicacion);
-          var tituloPublicacion = document.createElement("h3");
-          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(tituloPublicacion);
-          var fechaPublicacion = document.createElement("p");
-          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
-          cajaPublicacion.appendChild(fechaPublicacion);
-          var textoPublicacion = document.createElement("p");
-          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
-          cajaPublicacion.appendChild(textoPublicacion);
-          document.getElementById("publicaciones").appendChild(cajaPublicacion);
-        }
-        </script>
+      <article>
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>What is home value prediction through artificial intelligence?<h3>
+                <p>Home value prediction through artificial intelligence is a service that utilizes algorithms and mathematical models to predict the value of a real estate property. Artificial intelligence is capable of processing large amounts of data, such as location, property size, number of bedrooms and bathrooms, age, among others, and providing an estimated value. This service has become increasingly popular due to its accuracy and speed in delivering results. Additionally, it helps individuals make informed decisions regarding the purchase or sale of a property.</p>
+            </div>
         </div>
-      </div>
-      <div id="blog">
-        <div id="publicaciones">
-      
-        <script>
-          var publicaciones = [
-          { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
-          { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
-          { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
-          { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
-          { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
-      ];
-        
-        for (var i = 0; i < 6; i++) {
-          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
-          var cajaPublicacion = document.createElement("div");
-          cajaPublicacion.className = "publicacion";
-          var imagenPublicacion = document.createElement("img");
-          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
-          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(imagenPublicacion);
-          var tituloPublicacion = document.createElement("h3");
-          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(tituloPublicacion);
-          var fechaPublicacion = document.createElement("p");
-          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
-          cajaPublicacion.appendChild(fechaPublicacion);
-          var textoPublicacion = document.createElement("p");
-          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
-          cajaPublicacion.appendChild(textoPublicacion);
-          document.getElementById("publicaciones").appendChild(cajaPublicacion);
-        }
-        </script>
+
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>How does the prediction of the value of houses through artificial intelligence work?<h3>
+                <p>The process of predicting the value of homes through artificial intelligence begins with data collection. </p>
+                <p>Data is gathered from similar properties that have recently been sold in the geographical area of the property being evaluated. This data is used to train the artificial intelligence model, which searches for patterns and relationships among the different attributes of the properties and their sale prices. Once the model has been trained, it is used to predict the value of the property in question. </p>
+                <p>Artificial intelligence algorithms can be adjusted to take into account factors such as location, property size, age, and other relevant attributes that affect property value. The home value prediction model through artificial intelligence is continually updated as new data is introduced. This means that the more the service is utilized, the more accurate the estimated value provided will be</p>
+            </div> 
         </div>
-      </div>
-      <div id="blog">
-        <div id="publicaciones">
-      
-        <script>
-          var publicaciones = [
-          { titulo: "Specialization in machine learning", fecha: "April 1, 2023", contenido: "Machine Learning is the technology that allows current technology to learn automatically. Self-driving cars, voice-controlled personal assistance, artificial intelligence to help doctors diagnose diseases – all of these were developed with the help of machine-learning software engineers..", imagen: "/static/img/loge_holberton_black.png" },
-          { titulo: "Specialization in Full stack", fecha: "April 2, 2023", contenido: "With our Full-Stack Web Development specialization, you'll gain a thorough background in popular web technologies and hands-on experience developing useful web products. The Full-Stack Web Development program is ideal for people who want to understand the whole picture of web development. The last three sprints will build on Foundations by focusing on the most popular languages and technologies for web development, including Javascript, Python, React, Redis, MySQL, Node.js, SASS, and more. You'll also learn best practices like user authentication, background jobs, and responsive design. Whether it's front-end, back-end, or full-stack engineering, this curriculum prepares you to create, maintain, and improve web applications like websites.", imagen: "/static/img/loge_holberton_silver.png" },
-          { titulo: "Specialization in ARVR", fecha: "April 4, 2023", contenido: "Augmented reality and virtual reality (AR/VR) are more than just the latest gaming technology. With AR/VR, students in California can tour the pyramids of Egypt, doctors can practice life-saving procedures, or they can even virtually try on furniture in their own living room. If you love art, education, games or storytelling, our Augmented Reality and Virtual Reality program may be the most suitable for you.", imagen: "/static/img/loge_holberton_red.png" },
-          { titulo: "Specialization in Backend.", fecha: "April 4, 2023", contenido: "Develop programming skills in students, applying the main programming languages for back-end development in web applications, adequately configuring the basic and complementary tools that allow them to design interfaces with a focus on services, for programming web solutions. in IT projects.", imagen: "/static/img/loge_holberton_red.png" },
-          { titulo: "Study scholarships for women", fecha: "March 28, 2023", contenido: "This month we celebrate Women's Day. A date that many use to remember the need we have for more women in STEM fields (science, technology, engineering and mathematics). A survey by the FRG Technology Consulting Java and PHP Salary Survey found that only one in 10 developers are women. In other words, in addition to having to deal with the talent gap that the industry needs, we also have to seek that more and more women begin to study programming or become interested in software development. But one of the limitations that many women interested in learning software development find is the cost of enrolling in a program. Not only in what a course can be worth, but also in that the time dedicated to learning means fewer hours at work, additional hardware expenses, etc. With this in mind, Holberton School Colombia currently offers support scholarships, which allow its female students to receive a salary during their participation in the program. This has been achieved thanks to a partnership with the WWB Foundation which, for example, for Cohort 15 (which began last June 2021) gave 7 women scholarships worth 1 SMMLV for 9 months.", imagen: "/static/img/loge_holberton_green.png" }
-      ];
         
-        for (var i = 0; i < 6; i++) {
-          var indicePublicaciones = Math.floor(Math.random() * publicaciones.length);
-          var cajaPublicacion = document.createElement("div");
-          cajaPublicacion.className = "publicacion";
-          var imagenPublicacion = document.createElement("img");
-          imagenPublicacion.src = publicaciones[indicePublicaciones].imagen;
-          imagenPublicacion.alt = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(imagenPublicacion);
-          var tituloPublicacion = document.createElement("h3");
-          tituloPublicacion.textContent = publicaciones[indicePublicaciones].titulo;
-          cajaPublicacion.appendChild(tituloPublicacion);
-          var fechaPublicacion = document.createElement("p");
-          fechaPublicacion.textContent = publicaciones[indicePublicaciones].fecha;
-          cajaPublicacion.appendChild(fechaPublicacion);
-          var textoPublicacion = document.createElement("p");
-          textoPublicacion.textContent = publicaciones[indicePublicaciones].contenido;
-          cajaPublicacion.appendChild(textoPublicacion);
-          document.getElementById("publicaciones").appendChild(cajaPublicacion);
-        }
-        </script>
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>Benefits of using home value prediction through artificial intelligence<h3>
+                <p>Predicting home values through artificial intelligence offers several benefits to property owners and buyers. These benefits include:</p>
+                <ul>
+                  <li>Greater accuracy in estimating property value.</li>
+                  <li>Faster delivery of results.</li>
+                  <li>Facilitates informed decision making regarding the purchase or sale of a property.</li>
+                  <li>Reduces the risk of overvaluation or undervaluation of a property.</li>
+                  <li>Allows property owners and buyers to adjust the estimated value to take into account specific characteristics of the property.</li>
+                </ul>
+            </div>
         </div>
+
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>Home value prediction through artificial intelligence<h3>
+                <p>Is a rapidly evolving field that utilizes advanced algorithms and mathematical models to estimate the value of a real estate property. This approach relies on the ability of artificial intelligence to analyze large volumes of data and identify significant patterns.</p>
+            </div>
+        </div>
+
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>To make an accurate prediction, data is collected from similar properties that have recently been sold in the same geographical area<h3>
+                <p>We accept various payment methods, including credit and debit cards, bank transfers, and PayPal. You can select the payment method that best suits your needs during the registration process.</p>
+            </div>  
+        </div>
+
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>Once trained, the model is used to predict the value of a specific property. The specific data of that property is inputted into the model, and it applies the learned algorithms and patterns to provide an estimation of the value.<h3>
+                <p>Home value prediction through artificial intelligence offers several benefits. Accuracy in value estimation is one of them, as the model is capable of considering a wide range of factors and their influence on the price. This helps property owners set an appropriate price when selling a property and enables buyers to make informed decisions regarding the offers they wish to make.</p>
+            </div>
+        </div>
+        
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>Additionally, artificial intelligence allows for quick and efficient results, speeding up the evaluation and decision-making process.<h3>
+                <p>It also reduces the risk of overvaluation or undervaluation of a property by employing an objective and data-driven approach.</p>
+            </div>
+        </div>
+
+        <div class="faq section-faq">
+            <div class="faq-content">
+                <h3>Another notable aspect is the ability to adjust the estimated value taking into account specific property features.<h3>
+                <p>This allows for greater customization and adaptability to the particular circumstances of each case.</p>  
+            </div>
+        </div>  
+
+        <div class="faq section-faq">
+          <div class="faq-content">
+              <h3>In summary<h3>
+              <p>home value prediction through artificial intelligence is a valuable tool in the real estate market that harnesses the power of data processing and advanced mathematical models to offer accurate and rapid estimations of a property's value. With its benefits in terms of accuracy, speed, and informed decision-making, this technology continues to gain popularity in the sector.</p>  
+          </div>
       </div>
+    </article>
+      
         
          
         <article> <!-- Second Article, PUBLICIDAD y SCRIPTS -->
